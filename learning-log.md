@@ -166,6 +166,22 @@ AI Engineering readiness will be assessed through independent demonstrations of 
 
 ---
 
+### 2026-11-21 — Clarification: validation vs testing; what 'change the model' means
+
+**Learner question:** "I don't understand the difference between the validation and test, also what do you mean by change your model"
+
+**Evidence:** Learner previously correctly proposed a training/validation/test split after a hint, but explicitly reports uncertainty about the purpose of validation vs a final held-out test and what model improvement involves. Treat this as a meaningful gap; do not mark independent mastery.
+
+**Clarification covered:**
+- Training data is used to learn weights/parameters.
+- Validation is used during development to choose and improve model architecture, features, hyperparameters and training procedures.
+- A held-out test set is used for a final, less-biased estimate after model selection; repeatedly tuning against it contaminates the evaluation.
+- Distinguish a training algorithm adjusting parameters from an engineer changing a model or its hyperparameters.
+
+**Next assessment:** Ask learner to apply these distinctions to a new example before advancing.
+
+---
+
 ## 5. Reading and study resources
 
 Use resources selectively as assigned. Completing them does not change mastery status.
@@ -205,6 +221,6 @@ Use resources selectively as assigned. Completing them does not change mastery s
 
 **Resume at:** Stage 0, Lesson 0.3 — answer generalization and dataset-split reasoning exercise. Lessons 0.1 and 0.2 mastery checks still pending.
 
-**Immediate task:** Explain whether repeatedly tuning a model based on test-set accuracy (75% to 95%) gives a valid generalization estimate, and why. Then teach back the purpose of training, validation, and test sets. Revisit older lesson concepts through cumulative retrieval.
+**Immediate task:** After the explanation of validation vs testing and what it means to change a model, the learner should explain why test-set feedback must not drive model selection and identify which set is used to learn weights versus choose hyperparameters. Earlier lessons remain pending retrieval checks.
 
 **Promotion criteria:** Correct classifications; clear explanation of what is learned versus programmed; successful transfer to a new example; recognition of key limits. If hints are required, record **Understood with guidance**, not independent mastery.
