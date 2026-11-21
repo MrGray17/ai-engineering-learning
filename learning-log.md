@@ -71,6 +71,7 @@ AI Engineering readiness will be assessed through independent demonstrations of 
 | 0 | Deep Learning (multi-layer neural networks) | Introduced | Lesson 0.1 explanation; learner assessment pending |
 | 0 | Large Language Models (learned language modeling) | Introduced | Lesson 0.1 explanation; learner assessment pending |
 | 0 | Model, features, parameters, training vs inference, loss | Introduced | Lesson 0.2 explained and interactive parameter-fitting demonstration; assessment pending |
+| 0 | Datasets, features, labels, splits, generalization and leakage | Introduced | Lesson 0.3 explanation and assessment assigned; understanding pending |
 | 0 | Neural-network training, loss, gradient descent | Not started | — |
 | 0 | Transformers and attention | Not started | — |
 | 0 | Tokenization, context windows, sampling | Not started | — |
@@ -142,9 +143,26 @@ AI Engineering readiness will be assessed through independent demonstrations of 
 
 **Interactive exercise provided:** Fit a taxi-fare model using sliders for `w` and `b` on three examples (1 km → 3 MAD, 2 km → 5 MAD, 3 km → 7 MAD), observe MSE and predict a 4 km fare.
 
-**Assessment outcome:** Pending. The learner has not yet submitted parameter choices, reasoning, or a transfer explanation. No independent mastery recorded.
+**Assessment outcome:** Partial correct answer: learner stated the taxi model 'learned incomplete' when the unseen night surcharge made the 4 km fare 12 MAD rather than the 9 MAD prediction. This correctly identifies an incomplete learned relationship. The response did not yet explain the missing nighttime feature or demonstrate transfer independently; mastery remains unverified.
 
 **Next action:** Predict behavior for altered weights and a new example; distinguish training from inference; explain why zero training loss is not enough for deployment. Keep the Lesson 0.1 understanding check pending as well.
+
+---
+
+### 2026-11-21 — Stage 0, Lesson 0.3
+
+**Lesson:** Training data, features and labels; generalization and train/validation/test splits.
+
+**Status:** Introduced — **assessment pending**.
+
+**Concepts presented:**
+- Samples, features and labels in supervised machine learning.
+- Memorization vs learning a generalizable relationship.
+- Training, validation and test sets; why performance on previously seen data is insufficient.
+- Data leakage, representative sampling, chronological and group-aware splits.
+- Fitting a pattern under one condition may fail under a changed real-world condition.
+
+**Understanding check:** Learner should propose where a nighttime surcharge belongs, diagnose misleading train/test evaluation, and explain what must change to improve the model. Do not mark independent mastery until reasoning and transfer are shown.
 
 ---
 
@@ -178,14 +196,15 @@ Use resources selectively as assigned. Completing them does not change mastery s
 | Date | Topic | Assessment | Outcome | Evidence / correction |
 |---|---|---|---|---|
 | 2026-11-21 | AI vs ML vs DL vs LLM | Lesson 0.1 reasoning questions assigned | Pending | No answers assessed yet |
-| 2026-11-21 | Model parameters, training, inference and MSE | Lesson 0.2 interactive taxi model and reasoning question | Pending | Explanation delivered; no learner answer yet |
+| 2026-11-21 | Model parameters, training, inference and MSE | Taxi model generalization question | Partially correct | Learner correctly said 'it learned incomplete'; missing-feature explanation and transfer pending |
+| 2026-11-21 | Dataset, features, labels and train/validation/test splits | Lesson 0.3 reasoning exercise assigned | Pending | Lesson introduced; understanding not assessed |
 
 ---
 
 ## 7. Next session
 
-**Resume at:** Stage 0, Lesson 0.2 — prediction and teach-back; Lesson 0.1 classification check still pending.
+**Resume at:** Stage 0, Lesson 0.3 — answer generalization and dataset-split reasoning exercise. Lessons 0.1 and 0.2 mastery checks still pending.
 
-**Immediate task:** Predict the fare with modified parameters, explain how training differs from inference, and why zero training error cannot guarantee good predictions; revisit the Lesson 0.1 decision-tree/chess classification checks.
+**Immediate task:** Explain train/validation/test separation and data leakage using a fresh scenario; revisit the Lesson 0.1 classification question and Lesson 0.2 training/inference distinction through later cumulative retrieval.
 
 **Promotion criteria:** Correct classifications; clear explanation of what is learned versus programmed; successful transfer to a new example; recognition of key limits. If hints are required, record **Understood with guidance**, not independent mastery.
