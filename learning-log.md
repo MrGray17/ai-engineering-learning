@@ -71,7 +71,7 @@ AI Engineering readiness will be assessed through independent demonstrations of 
 | 0 | Deep Learning (multi-layer neural networks) | Introduced | Lesson 0.1 explanation; learner assessment pending |
 | 0 | Large Language Models (learned language modeling) | Introduced | Lesson 0.1 explanation; learner assessment pending |
 | 0 | Model, features, parameters, training vs inference, loss | Introduced | Lesson 0.2 explained and interactive parameter-fitting demonstration; assessment pending |
-| 0 | Datasets, features, labels, splits, generalization and leakage | Introduced | Lesson 0.3 explanation and assessment assigned; understanding pending |
+| 0 | Datasets, features, labels, splits, generalization and leakage | Understood with guidance (partial) | Correctly proposed train/validation/test split after hint; test-set contamination and leakage transfer check pending |
 | 0 | Neural-network training, loss, gradient descent | Not started | — |
 | 0 | Transformers and attention | Not started | — |
 | 0 | Tokenization, context windows, sampling | Not started | — |
@@ -162,7 +162,7 @@ AI Engineering readiness will be assessed through independent demonstrations of 
 - Data leakage, representative sampling, chronological and group-aware splits.
 - Fitting a pattern under one condition may fail under a changed real-world condition.
 
-**Understanding check (partial response received):** Learner answered the student-exam scenario: 'nope it might be overfittin'. Correctly rejected the 98% training accuracy as sufficient proof and identified overfitting as a possibility, but did not explain why or propose an unseen-data evaluation. Important correction: training accuracy alone does not establish that the model *is* overfit. A hint was given using practiced vs unfamiliar exam questions. **Status remains Introduced; follow-up reasoning pending.**
+**Understanding check (follow-up response):** Learner first said 'nope it might be overfittin' (correct suspicion, without evidence), then correctly proposed 'split the dataset to training validating and test' when asked how to evaluate fairly. This identifies the essential evaluation structure, but has not yet justified the purpose of each subset or how repeated test-set-based model changes compromise independence. **Status: Understood with guidance (for data splitting); independent application pending.**
 
 ---
 
@@ -197,7 +197,7 @@ Use resources selectively as assigned. Completing them does not change mastery s
 |---|---|---|---|---|
 | 2026-11-21 | AI vs ML vs DL vs LLM | Lesson 0.1 reasoning questions assigned | Pending | No answers assessed yet |
 | 2026-11-21 | Model parameters, training, inference and MSE | Taxi model generalization question | Partially correct | Learner correctly said 'it learned incomplete'; missing-feature explanation and transfer pending |
-| 2026-11-21 | Dataset, features, labels and train/validation/test splits | Lesson 0.3 student-exam assessment | Partially correct; hint given | Rejected 98% in-sample accuracy and raised possible overfitting; no causal explanation or evaluation design yet. Training accuracy alone does not prove overfitting. |
+| 2026-11-21 | Dataset, features, labels and train/validation/test splits | Lesson 0.3 student-exam follow-up | Understood with guidance (partial) | Rejected in-sample accuracy, recognized possible overfitting, and proposed train/validation/test split after hint. Test-reuse thought experiment pending. |
 
 ---
 
@@ -205,6 +205,6 @@ Use resources selectively as assigned. Completing them does not change mastery s
 
 **Resume at:** Stage 0, Lesson 0.3 — answer generalization and dataset-split reasoning exercise. Lessons 0.1 and 0.2 mastery checks still pending.
 
-**Immediate task:** Respond to the Lesson 0.3 hint: propose a way to test whether the 98%-accurate student outcome model generalizes to new students and explain why this differs from testing on the same 10,000 examples. Later revisit earlier lessons and leakage.
+**Immediate task:** Explain whether repeatedly tuning a model based on test-set accuracy (75% to 95%) gives a valid generalization estimate, and why. Then teach back the purpose of training, validation, and test sets. Revisit older lesson concepts through cumulative retrieval.
 
 **Promotion criteria:** Correct classifications; clear explanation of what is learned versus programmed; successful transfer to a new example; recognition of key limits. If hints are required, record **Understood with guidance**, not independent mastery.
