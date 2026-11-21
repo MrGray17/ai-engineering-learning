@@ -72,6 +72,7 @@ AI Engineering readiness will be assessed through independent demonstrations of 
 | 0 | Large Language Models (learned language modeling) | Introduced | Lesson 0.1 explanation; learner assessment pending |
 | 0 | Model, features, parameters, training vs inference, loss | Introduced | Lesson 0.2 explained and interactive parameter-fitting demonstration; assessment pending |
 | 0 | Datasets, features, labels, splits, generalization and leakage | Understood with guidance (partial) | Correctly proposed train/validation/test split after hint; test-set contamination and leakage transfer check pending |
+| 0 | Loss optimization and gradient descent (initial scalar example) | Introduced | Lesson 0.4 explained with one-parameter taxi model; prediction and teach-back pending |
 | 0 | Neural-network training, loss, gradient descent | Not started | — |
 | 0 | Transformers and attention | Not started | — |
 | 0 | Tokenization, context windows, sampling | Not started | — |
@@ -199,6 +200,29 @@ AI Engineering readiness will be assessed through independent demonstrations of 
 
 ---
 
+### 2026-11-21 — Stage 0, Lesson 0.4: Gradient descent intuition and first update
+
+**Status:** Introduced, not independently assessed.
+
+**Teaching focus:**
+- Return to a single labeled example: x=1 km, actual fare y=3 MAD.
+- Hold bias b=1 fixed, leaving one learnable weight w; prediction is y_hat=w+1.
+- Squared-error loss L(w)=(w-2)^2; derivative dL/dw=2(w-2).
+- Gradient descent update: w_new=w-learning_rate*gradient.
+- Worked example: start w=0, gradient=-4, learning rate 0.25, new w=1, loss drops 4→1. Repeating yields w=1.5, loss=0.25.
+- Learning rate as update-size control; too large can cause overshoot or divergence. One-example simplified illustration; multi-parameter and mini-batch training later.
+- Interactive experiment and prediction check included.
+
+**Assessment:** Pending; learner must independently predict sign/direction and calculate next update with a different w.
+
+---
+
+### 2026-11-21 — Learner reports understanding of validation vs test distinction
+
+Learner response: "now I get it, alright lets continue learning". Record **self-reported understanding**, not an independent teach-back or transfer check. Earlier validation/test reasoning remains guided; revisit in later cumulative retrieval.
+
+---
+
 ## 5. Reading and study resources
 
 Use resources selectively as assigned. Completing them does not change mastery status.
@@ -234,10 +258,14 @@ Use resources selectively as assigned. Completing them does not change mastery s
 
 ---
 
+| 2026-11-21 | Gradient descent first parameter update | Lesson 0.4 worked example; new-value prediction assigned | Pending | No learner gradient calculation or mechanism teach-back yet |
+
+---
+
 ## 7. Next session
 
-**Resume at:** Stage 0, Lesson 0.3 — answer generalization and dataset-split reasoning exercise. Lessons 0.1 and 0.2 mastery checks still pending.
+**Resume at:** Stage 0, Lesson 0.4 — gradient descent prediction exercise. Revisit Lesson 0.3 validation/test distinction through future independent retrieval.
 
-**Immediate task:** Explain why validation influences model selection even though its examples are not used to fit weights, and why test feedback must stay separate from tuning. Ask a single short transfer question; resume only after understanding is demonstrated.
+**Immediate task:** Predict the next gradient descent update for w=3 with fixed b=1 and learning rate 0.25, and justify the direction from the sign of the gradient. Later independently explain why tuning on test results contaminates evaluation.
 
 **Promotion criteria:** Correct classifications; clear explanation of what is learned versus programmed; successful transfer to a new example; recognition of key limits. If hints are required, record **Understood with guidance**, not independent mastery.
