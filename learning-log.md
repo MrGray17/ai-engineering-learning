@@ -256,8 +256,6 @@ Use resources selectively as assigned. Completing them does not change mastery s
 | 2026-11-21 | Model parameters, training, inference and MSE | Taxi model generalization question | Partially correct | Learner correctly said 'it learned incomplete'; missing-feature explanation and transfer pending |
 | 2026-11-21 | Dataset, features, labels and train/validation/test splits | Lesson 0.3 student-exam follow-up | Understood with guidance (partial) | Rejected in-sample accuracy, recognized possible overfitting, and proposed train/validation/test split after hint. Test-reuse thought experiment pending. |
 
----
-
 | 2026-11-21 | Gradient descent first parameter update | Lesson 0.4 worked example; new-value prediction assigned | Pending | No learner gradient calculation or mechanism teach-back yet |
 
 ---
