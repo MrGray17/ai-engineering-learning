@@ -182,6 +182,23 @@ AI Engineering readiness will be assessed through independent demonstrations of 
 
 ---
 
+### 2026-11-21 — Clarification: both validation and test data are unseen during weight training
+
+**Learner question:** "still dont get it, both validation and test sets are new to the model"
+
+**Evaluation:** Correct observation: both datasets are withheld from direct parameter training. The confusion is between *not training weights on data* and *not using evaluation feedback to influence development*.
+
+**Clarification taught:**
+- Training data directly influences learned parameters.
+- Validation data influences model selection, hyperparameters, input features and other engineering choices *indirectly*; repeated validation-guided revisions can overfit to validation.
+- Test data must remain independent of those development choices so it can provide an estimate of generalization.
+- Once engineers change the model in response to test scores, they have effectively used the test set for validation; a fresh independent test is needed for the revised model.
+- Example: model A scores 65% on validation; engineer adds attendance feature, trains model B and sees 88% validation; selected model B scores 81% on untouched test (illustrative numbers).
+
+**Mastery status:** Not independently explained yet; direct comprehension check pending. Learner's correction was valuable and accurate.
+
+---
+
 ## 5. Reading and study resources
 
 Use resources selectively as assigned. Completing them does not change mastery status.
@@ -221,6 +238,6 @@ Use resources selectively as assigned. Completing them does not change mastery s
 
 **Resume at:** Stage 0, Lesson 0.3 — answer generalization and dataset-split reasoning exercise. Lessons 0.1 and 0.2 mastery checks still pending.
 
-**Immediate task:** After the explanation of validation vs testing and what it means to change a model, the learner should explain why test-set feedback must not drive model selection and identify which set is used to learn weights versus choose hyperparameters. Earlier lessons remain pending retrieval checks.
+**Immediate task:** Explain why validation influences model selection even though its examples are not used to fit weights, and why test feedback must stay separate from tuning. Ask a single short transfer question; resume only after understanding is demonstrated.
 
 **Promotion criteria:** Correct classifications; clear explanation of what is learned versus programmed; successful transfer to a new example; recognition of key limits. If hints are required, record **Understood with guidance**, not independent mastery.
