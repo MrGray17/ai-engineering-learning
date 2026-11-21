@@ -70,6 +70,7 @@ AI Engineering readiness will be assessed through independent demonstrations of 
 | 0 | Machine Learning (learning from data) | Introduced | Lesson 0.1 explanation; learner assessment pending |
 | 0 | Deep Learning (multi-layer neural networks) | Introduced | Lesson 0.1 explanation; learner assessment pending |
 | 0 | Large Language Models (learned language modeling) | Introduced | Lesson 0.1 explanation; learner assessment pending |
+| 0 | Model, features, parameters, training vs inference, loss | Introduced | Lesson 0.2 explained and interactive parameter-fitting demonstration; assessment pending |
 | 0 | Neural-network training, loss, gradient descent | Not started | — |
 | 0 | Transformers and attention | Not started | — |
 | 0 | Tokenization, context windows, sampling | Not started | — |
@@ -125,6 +126,28 @@ AI Engineering readiness will be assessed through independent demonstrations of 
 
 ---
 
+### 2026-11-21 — Stage 0, Lesson 0.2
+
+**Lesson:** What is a model, and how does a machine actually learn?
+
+**Status:** Introduced — **not passed yet**.
+
+**Concepts presented:**
+- Input feature and output prediction; a mathematical model such as `y_hat = w*x + b`.
+- Parameters (weight and bias) change the model's behavior.
+- Historical labeled examples; adjusting parameters to fit them.
+- Error, mean squared error (MSE), and loss as signals for improving predictions.
+- Training adjusts parameters; inference uses learned parameters.
+- Initial idea of generalization: fitting the training examples does not ensure accuracy on unseen situations.
+
+**Interactive exercise provided:** Fit a taxi-fare model using sliders for `w` and `b` on three examples (1 km → 3 MAD, 2 km → 5 MAD, 3 km → 7 MAD), observe MSE and predict a 4 km fare.
+
+**Assessment outcome:** Pending. The learner has not yet submitted parameter choices, reasoning, or a transfer explanation. No independent mastery recorded.
+
+**Next action:** Predict behavior for altered weights and a new example; distinguish training from inference; explain why zero training loss is not enough for deployment. Keep the Lesson 0.1 understanding check pending as well.
+
+---
+
 ## 5. Reading and study resources
 
 Use resources selectively as assigned. Completing them does not change mastery status.
@@ -155,13 +178,14 @@ Use resources selectively as assigned. Completing them does not change mastery s
 | Date | Topic | Assessment | Outcome | Evidence / correction |
 |---|---|---|---|---|
 | 2026-11-21 | AI vs ML vs DL vs LLM | Lesson 0.1 reasoning questions assigned | Pending | No answers assessed yet |
+| 2026-11-21 | Model parameters, training, inference and MSE | Lesson 0.2 interactive taxi model and reasoning question | Pending | Explanation delivered; no learner answer yet |
 
 ---
 
 ## 7. Next session
 
-**Resume at:** Stage 0, Lesson 0.1 — understanding check.
+**Resume at:** Stage 0, Lesson 0.2 — prediction and teach-back; Lesson 0.1 classification check still pending.
 
-**Immediate task:** Answer the decision-tree and chess-engine classification questions **without consulting notes**. Explain the reasoning, not just the labels.
+**Immediate task:** Predict the fare with modified parameters, explain how training differs from inference, and why zero training error cannot guarantee good predictions; revisit the Lesson 0.1 decision-tree/chess classification checks.
 
 **Promotion criteria:** Correct classifications; clear explanation of what is learned versus programmed; successful transfer to a new example; recognition of key limits. If hints are required, record **Understood with guidance**, not independent mastery.
