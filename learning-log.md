@@ -162,7 +162,7 @@ AI Engineering readiness will be assessed through independent demonstrations of 
 - Data leakage, representative sampling, chronological and group-aware splits.
 - Fitting a pattern under one condition may fail under a changed real-world condition.
 
-**Understanding check:** Learner should propose where a nighttime surcharge belongs, diagnose misleading train/test evaluation, and explain what must change to improve the model. Do not mark independent mastery until reasoning and transfer are shown.
+**Understanding check (partial response received):** Learner answered the student-exam scenario: 'nope it might be overfittin'. Correctly rejected the 98% training accuracy as sufficient proof and identified overfitting as a possibility, but did not explain why or propose an unseen-data evaluation. Important correction: training accuracy alone does not establish that the model *is* overfit. A hint was given using practiced vs unfamiliar exam questions. **Status remains Introduced; follow-up reasoning pending.**
 
 ---
 
@@ -197,7 +197,7 @@ Use resources selectively as assigned. Completing them does not change mastery s
 |---|---|---|---|---|
 | 2026-11-21 | AI vs ML vs DL vs LLM | Lesson 0.1 reasoning questions assigned | Pending | No answers assessed yet |
 | 2026-11-21 | Model parameters, training, inference and MSE | Taxi model generalization question | Partially correct | Learner correctly said 'it learned incomplete'; missing-feature explanation and transfer pending |
-| 2026-11-21 | Dataset, features, labels and train/validation/test splits | Lesson 0.3 reasoning exercise assigned | Pending | Lesson introduced; understanding not assessed |
+| 2026-11-21 | Dataset, features, labels and train/validation/test splits | Lesson 0.3 student-exam assessment | Partially correct; hint given | Rejected 98% in-sample accuracy and raised possible overfitting; no causal explanation or evaluation design yet. Training accuracy alone does not prove overfitting. |
 
 ---
 
@@ -205,6 +205,6 @@ Use resources selectively as assigned. Completing them does not change mastery s
 
 **Resume at:** Stage 0, Lesson 0.3 — answer generalization and dataset-split reasoning exercise. Lessons 0.1 and 0.2 mastery checks still pending.
 
-**Immediate task:** Explain train/validation/test separation and data leakage using a fresh scenario; revisit the Lesson 0.1 classification question and Lesson 0.2 training/inference distinction through later cumulative retrieval.
+**Immediate task:** Respond to the Lesson 0.3 hint: propose a way to test whether the 98%-accurate student outcome model generalizes to new students and explain why this differs from testing on the same 10,000 examples. Later revisit earlier lessons and leakage.
 
 **Promotion criteria:** Correct classifications; clear explanation of what is learned versus programmed; successful transfer to a new example; recognition of key limits. If hints are required, record **Understood with guidance**, not independent mastery.
