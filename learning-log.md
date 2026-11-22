@@ -6,7 +6,7 @@
 >
 > **Practical project:** [AI Coding Agent Platform](https://github.com/MrGray17/AI-coding-agent-platform) (implementation and project delivery, tracked separately).
 >
-> **Last updated:** 2026-11-21
+> **Last updated:** 2026-11-22
 
 ---
 
@@ -73,6 +73,7 @@ AI Engineering readiness will be assessed through independent demonstrations of 
 | 0 | Model, features, parameters, training vs inference, loss | Introduced | Lesson 0.2 explained and interactive parameter-fitting demonstration; assessment pending |
 | 0 | Datasets, features, labels, splits, generalization and leakage | Understood with guidance (partial) | Correctly proposed train/validation/test split after hint; test-set contamination and leakage transfer check pending |
 | 0 | Loss optimization and gradient descent (initial scalar example) | Introduced | Lesson 0.4 explained with one-parameter taxi model; prediction and teach-back pending |
+| 0 | Partial derivatives, gradient vectors, multi-parameter updates | Introduced | Lesson 0.5 worked two-parameter taxi model; independent calculation pending |
 | 0 | Neural-network training, loss, gradient descent | Not started | — |
 | 0 | Transformers and attention | Not started | — |
 | 0 | Tokenization, context windows, sampling | Not started | — |
@@ -223,6 +224,26 @@ Learner response: "now I get it, alright lets continue learning". Record **self-
 
 ---
 
+### 2026-11-22 — Stage 0, Lesson 0.5: Multiple parameters and gradients
+
+**Status:** Introduced — no independent demonstration yet.
+
+**Reason for lesson:** Progress beyond the single-weight gradient descent case toward understanding how neural networks update many parameters.
+
+**Concepts presented:**
+- A simple model has both a weight and bias: `y_hat = w*x + b`.
+- For sample `x=2`, `y=5`, use squared error `L=(2w+b-5)^2`.
+- A **partial derivative** measures how loss changes when one parameter changes while others are fixed.
+- Derivatives: `dL/dw = 2*(y_hat-y)*x`, `dL/db = 2*(y_hat-y)`.
+- A **gradient** is the collection of these derivatives; apply the update rule to each parameter.
+- Worked start `w=1, b=0`: prediction 2, loss 9, derivatives (-12,-6). At learning rate 0.05, new parameters `w=1.6,b=0.3`, prediction 3.5, loss 2.25.
+- One training example is not enough to uniquely determine both parameters; many choices satisfy `2w+b=5`. Low training loss does not guarantee generalization.
+- Interactive multi-parameter gradient descent example and one transfer question assigned.
+
+**Assessment:** Pending. Also retain Lesson 0.4 single-parameter calculation as an unverified retrieval item.
+
+---
+
 ## 5. Reading and study resources
 
 Use resources selectively as assigned. Completing them does not change mastery status.
@@ -260,10 +281,14 @@ Use resources selectively as assigned. Completing them does not change mastery s
 
 ---
 
+| 2026-11-22 | Partial derivatives and gradient-vector updates | Lesson 0.5 two-parameter calculation and transfer check | Pending | Lesson introduced; no independent answer submitted |
+
+---
+
 ## 7. Next session
 
-**Resume at:** Stage 0, Lesson 0.4 — gradient descent prediction exercise. Revisit Lesson 0.3 validation/test distinction through future independent retrieval.
+**Resume at:** Stage 0, Lesson 0.5 — independent partial-derivative / two-parameter gradient step. Lesson 0.4 and the validation/test distinction still need independent retrieval.
 
-**Immediate task:** Predict the next gradient descent update for w=3 with fixed b=1 and learning rate 0.25, and justify the direction from the sign of the gradient. Later independently explain why tuning on test results contaminates evaluation.
+**Immediate task:** With x=1, y=3, initial w=0 and b=0, calculate prediction, squared loss, both partial derivatives, and the parameter values after learning rate 0.1. Explain why a single example cannot uniquely fix both w and b. Revisit prior gradient and validation/test checks later.
 
 **Promotion criteria:** Correct classifications; clear explanation of what is learned versus programmed; successful transfer to a new example; recognition of key limits. If hints are required, record **Understood with guidance**, not independent mastery.
