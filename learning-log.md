@@ -279,6 +279,18 @@ Learner response: "now I get it, alright lets continue learning". Record **self-
 
 ---
 
+### 2026-11-22 — Clarification: why nonlinear activations matter
+
+**Learner question:** Did not understand why stacking linear/affine weighted sums cannot represent more complex relationships, or why ReLU helps.
+
+**Explanation provided:** 
+- The composition of affine transformations remains affine: if `h=2x+1` and `y=3h+4`, then `y=6x+7`. Therefore, adding purely affine layers does not increase function-shape expressiveness.
+- ReLU `max(0,z)` can introduce a change of slope (a kink). E.g. `h=ReLU(2x-2)`, `y=3h+1` gives output 1 for `x<=1`, and `6x-5` when `x>1`; this is not one straight line.
+- Both weights and biases still matter; activations make composition nonlinear, enabling more complex functions.
+- Independent comprehension check pending; do not promote mastery for receiving this explanation.
+
+---
+
 ## 5. Reading and study resources
 
 Use resources selectively as assigned. Completing them does not change mastery status.
@@ -324,8 +336,8 @@ Use resources selectively as assigned. Completing them does not change mastery s
 
 ## 7. Next session
 
-**Resume at:** Stage 0, Lesson 0.6 neuron calculation and teach-back. Previous weight/bias/learning-rate explanation and gradient calculus are not independently verified.
+**Resume at:** Stage 0, Lesson 0.6 — explain why affine-only layers collapse into a single affine operation, and how ReLU changes the shape; previous gradient learning checks remain open.
 
-**Immediate task:** Predict the weighted sum and ReLU output for a different email input, and explain why learning rate is absent from the neuron's inference formula. Revisit older gradient-descent and dataset-split understanding through retrieval checks.
+**Immediate task:** Explain why `h=2x+1, y=3h+4` can become one equation but `h=ReLU(2x-2), y=3h+1` cannot be described by one straight line. Follow with a small numeric prediction and prior retrieval checks.
 
 **Promotion criteria:** Correct classifications; clear explanation of what is learned versus programmed; successful transfer to a new example; recognition of key limits. If hints are required, record **Understood with guidance**, not independent mastery.
