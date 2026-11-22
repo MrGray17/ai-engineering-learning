@@ -74,6 +74,7 @@ AI Engineering readiness will be assessed through independent demonstrations of 
 | 0 | Datasets, features, labels, splits, generalization and leakage | Understood with guidance (partial) | Correctly proposed train/validation/test split after hint; test-set contamination and leakage transfer check pending |
 | 0 | Loss optimization and gradient descent (initial scalar example) | Introduced | Lesson 0.4 explained with one-parameter taxi model; prediction and teach-back pending |
 | 0 | Partial derivatives, gradient vectors, multi-parameter updates | Introduced | Lesson 0.5 worked two-parameter taxi model; independent calculation pending |
+| 0 | Artificial neuron, weighted sum, bias, ReLU activation | Introduced | Lesson 0.6; independent prediction/teach-back pending |
 | 0 | Neural-network training, loss, gradient descent | Not started | — |
 | 0 | Transformers and attention | Not started | — |
 | 0 | Tokenization, context windows, sampling | Not started | — |
@@ -260,6 +261,24 @@ Learner response: "now I get it, alright lets continue learning". Record **self-
 
 ---
 
+### 2026-11-22 — Stage 0, Lesson 0.6: The first artificial neuron
+
+**Status:** Introduced; no independent assessment yet.
+
+**Learner request:** Asked to move forward after a targeted clarification of weights, bias, and learning rate. These prerequisites are **not** marked mastered without teach-back.
+
+**Concepts taught:**
+- A neuron receives numerical inputs, multiplies each by its own weight, adds the terms and an additive bias: `z = w1*x1 + w2*x2 + b`.
+- Illustrative spam-signal model: suspicious-phrase count and trusted-sender flag; positive and negative weights contribute differently.
+- An activation function transforms the weighted sum. ReLU: `max(0,z)`.
+- Nonlinearity allows multilayer networks to represent relationships that cannot be collapsed into one affine transformation.
+- Toy activation score is not automatically a probability; actual models and interpretations depend on objectives and architectures.
+- Training learns weights/biases; learning rate controls parameter adjustment *during training*, not neuron inference.
+
+**Assessment pending:** Predict the weighted sum and ReLU output for a changed input, and explain the difference between weights, bias, and learning rate. No mastery assumed.
+
+---
+
 ## 5. Reading and study resources
 
 Use resources selectively as assigned. Completing them does not change mastery status.
@@ -299,12 +318,14 @@ Use resources selectively as assigned. Completing them does not change mastery s
 
 | 2026-11-22 | Partial derivatives and gradient-vector updates | Lesson 0.5 two-parameter calculation and transfer check | Pending | Lesson introduced; no independent answer submitted |
 
+| 2026-11-22 | Artificial neuron, weighted sums and ReLU | Lesson 0.6 prediction assignment | Pending | Neuron explanation delivered; no independent response |
+
 ---
 
 ## 7. Next session
 
-**Resume at:** Stage 0, Lesson 0.5 prerequisite clarification — weight vs bias, multiple parameters, and learning rate; independent teach-back pending. Do not advance to more derivative calculus until this is clear.
+**Resume at:** Stage 0, Lesson 0.6 neuron calculation and teach-back. Previous weight/bias/learning-rate explanation and gradient calculus are not independently verified.
 
-**Immediate task:** Use a fresh base-fee/per-km pricing scenario to identify w and b, and explain whether changing learning rate changes the fare formula itself or the speed/size of learning updates. Revisit the multi-parameter derivative assessment only after the concepts are solid.
+**Immediate task:** Predict the weighted sum and ReLU output for a different email input, and explain why learning rate is absent from the neuron's inference formula. Revisit older gradient-descent and dataset-split understanding through retrieval checks.
 
 **Promotion criteria:** Correct classifications; clear explanation of what is learned versus programmed; successful transfer to a new example; recognition of key limits. If hints are required, record **Understood with guidance**, not independent mastery.
