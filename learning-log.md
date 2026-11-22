@@ -244,6 +244,22 @@ Learner response: "now I get it, alright lets continue learning". Record **self-
 
 ---
 
+### 2026-11-22 — Clarification: weight, bias, multiple parameters, and learning rate
+
+**Learner's confusion (explicit):** Asked what learning rate is and how it is chosen, what multiple parameters are, interpreted `w` as finding a fare relationship such as doubling, and asked what bias means.
+
+**Clarification provided:**
+- From fares 3, 5, 7, 9 at distances 1, 2, 3, 4 km, the fare increases by **2** per additional kilometer; this is additive (+2), not doubling (×2). In `y_hat=w*x+b`, `w=2` is the slope/per-kilometer charge.
+- `b=1` is an intercept; interpreted in the toy taxi scenario as a fixed starting fee. In general, bias is an additive offset, not necessarily a real-world fee.
+- `w` and `b` are already two **learnable parameters**. Adding a nighttime indicator with its own weight gives three parameters (`w1,w2,b`).
+- The **learning rate** `eta` is a training **hyperparameter**: a control on step size in `w_new=w-eta*gradient`; unlike weights and biases it is normally chosen/tuned, often with validation and observation of stability/training speed.
+- Example at `w=0`, gradient -4: learning rates .10, .25, .50, 1.00 produce updated weights 0.4, 1, 2, 4. Larger is not always better.
+- Important distinction: the chosen initial weight and bias in worked examples are pedagogical; actual training learns suitable values.
+
+**Assessment:** No new independent answer yet. Mark the detailed distinction **Introduced / clarification needed**, not mastered. Ask learner to identify weight, bias, and learning rate from a fresh pricing example before introducing more gradients.
+
+---
+
 ## 5. Reading and study resources
 
 Use resources selectively as assigned. Completing them does not change mastery status.
@@ -287,8 +303,8 @@ Use resources selectively as assigned. Completing them does not change mastery s
 
 ## 7. Next session
 
-**Resume at:** Stage 0, Lesson 0.5 — independent partial-derivative / two-parameter gradient step. Lesson 0.4 and the validation/test distinction still need independent retrieval.
+**Resume at:** Stage 0, Lesson 0.5 prerequisite clarification — weight vs bias, multiple parameters, and learning rate; independent teach-back pending. Do not advance to more derivative calculus until this is clear.
 
-**Immediate task:** With x=1, y=3, initial w=0 and b=0, calculate prediction, squared loss, both partial derivatives, and the parameter values after learning rate 0.1. Explain why a single example cannot uniquely fix both w and b. Revisit prior gradient and validation/test checks later.
+**Immediate task:** Use a fresh base-fee/per-km pricing scenario to identify w and b, and explain whether changing learning rate changes the fare formula itself or the speed/size of learning updates. Revisit the multi-parameter derivative assessment only after the concepts are solid.
 
 **Promotion criteria:** Correct classifications; clear explanation of what is learned versus programmed; successful transfer to a new example; recognition of key limits. If hints are required, record **Understood with guidance**, not independent mastery.
